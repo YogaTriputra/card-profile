@@ -5,10 +5,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Fallback */
+    height: 100dvh; /* Dynamic Viewport Height untuk mobile */
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow: hidden; /* Mencegah scroll jika tidak perlu */
 }
 
 .card{
@@ -131,7 +133,7 @@ body{
 @media screen and (max-width: 768px) {
     .container {
         width: 85%; /* Sedikit lebih lebar di layar kecil */
-        height: 600px; /* Tambah tinggi agar tidak sesak */
+        height: 580px; /* Kurangi tinggi container tablet */
     }
 
     .card {
@@ -150,9 +152,9 @@ body{
         font-size: 22px;
     }
 
-    /* Tombol agak naik dikit agar tidak terlalu bawah */
+    /* Tombol agak naik dikit */
     .next-btn {
-        bottom: 20px; 
+        bottom: 30px; 
     }
 }
 
@@ -160,12 +162,13 @@ body{
 @media screen and (max-width: 480px) {
     .container {
         width: 95%; /* Hampir full width */
-        height: 580px;
+        height: 550px; /* Kurangi tinggi container mobile */
     }
 
     .card {
-        height: 480px;
-        padding: 20px;
+        height: 400px;
+        width: 340px;
+        padding: 10px;
     }
 
     .profile-img {
@@ -190,7 +193,7 @@ body{
     .next-btn {
         width: 45px;
         height: 45px;
-        bottom: 45px; /* Naikkan lagi */
+        bottom: 110px; /* Kurangi jarak bawah agar lebih dekat */
     }
 }
 
