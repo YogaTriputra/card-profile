@@ -125,31 +125,72 @@ body{
 }
 
 /* Responsiveness untuk layar kecil (HP) */
-@media screen and (max-width: 380px) {
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablet & Mobile (up to 768px) */
+@media screen and (max-width: 768px) {
     .container {
-        width: 90%;
-        height: 520px;
+        width: 85%; /* Sedikit lebih lebar di layar kecil */
+        height: 600px; /* Tambah tinggi agar tidak sesak */
     }
 
     .card {
         width: 100%;
-        height: 480px;
-        padding: 20px;
-        box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+        height: 500px; /* Tinggi kartu disesuaikan */
+        padding: 25px;
+        box-sizing: border-box;
     }
 
     .profile-img {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
+    }
+    
+    .nama {
+        font-size: 22px;
+    }
+
+    /* Tombol agak naik dikit agar tidak terlalu bawah */
+    .next-btn {
+        bottom: 20px; 
+    }
+}
+
+/* Mobile Phones (up to 480px) */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%; /* Hampir full width */
+        height: 580px;
+    }
+
+    .card {
+        height: 480px;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
     }
 
     .nama {
         font-size: 20px;
     }
 
+    .role, .connect {
+        font-size: 14px;
+    }
+
     .button {
-        font-size: 12px;
+        font-size: 13px;
         padding: 8px 15px;
+        margin: 2px;
+    }
+    
+    .next-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 45px; /* Naikkan lagi */
     }
 }
 
