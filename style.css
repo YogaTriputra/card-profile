@@ -101,7 +101,7 @@ body{
 /* Tombol Navigasi */
 .next-btn {
     position: absolute;
-    bottom: 210px; /* Jarak dari bawah container */
+    bottom: 20px; /* Jarak dari bawah container */
     left: 50%;
     transform: translateX(-50%); /* Posisi tengah horizontal */
     
